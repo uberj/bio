@@ -1,0 +1,24 @@
+\documentclass[a4paper]{article}
+\usepackage{caption}
+\title{Sweave Example 1}
+\author{Vinh Nguyen}
+\begin{document}
+\maketitle
+Here is a linear regression example:
+
+<<f, eval=TRUE, echo=FALSE, term=True>>=
+source('test.r')
+@
+
+\begin{figure}
+\captionsetup{justification=raggedright, singlelinecheck=false} % Moves caption to the left
+% Need \usepackage{caption}
+\caption{H Feistel Function}
+\label{fig:graph}
+<<figplot, echo=FALSE, term=FALSE, fig=TRUE, include=TRUE>>=
+    hist(mean.x, main=NULL)
+    title("A random title", adj=0)
+@
+\end{figure}
+Sweave embeds the results as Table ~\ref{fig:graph}!
+\end{document}
