@@ -57,6 +57,7 @@
 \def\cite{\@ifstar{\citeyear}{\citefull}}
 \def\citefull{\def\astroncite##1##2{##1, ##2}\@internalcite}
 \def\citeyear{\def\astroncite##1##2{##2}\@internalcite}
+\def\citeauthor{\def\astroncite##1##2\@internalcite}
 
 \def\@citex[#1]#2{\if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi
   \def\@citea{}\@cite{\@for\@citeb:=#2\do

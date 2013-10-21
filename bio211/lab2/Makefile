@@ -1,11 +1,11 @@
 
-TEXFILE="lab_report_2"
+TEXFILE="lab2"
 TEX=pdflatex -shell-escape
 #TEXFILE="test_python"
 basic:
 	$(TEX) $(TEXFILE).tex
 
-all: clean basic sympy display
+all: clean basic bibtex display
 	echo 'Done.'
 
 build: basic sympy
