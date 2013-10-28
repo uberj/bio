@@ -3701,7 +3701,8 @@ function(libname, pkgname) {
   .floating.header <-
     function() {
       if (.format.floating==TRUE) {
-        cat("\\begin{", .format.floating.environment,"}[", .format.table.placement,"] \\centering \n",sep="")
+        cat(" \\begin{", .format.floating.environment,"}[", .format.table.placement,"] \n",sep="")
+        cat(" \\captionsetup{justification=raggedright, singlelinecheck=false}  ")
         cat("  \\caption{", .format.title, "} \n",sep="")   
         cat("  \\label{", .format.label, "} \n",sep="")
         .set.font.size()
