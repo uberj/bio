@@ -2,14 +2,15 @@
 \usepackage{caption}
 \title{Sweave Example 1}
 \author{Vinh Nguyen}
-\usepackage{/usr/share/R/share/texmf/tex/latex/Sweave}
+\usepackage{Sweave}
 \begin{document}
 \maketitle
 Here is a linear regression example:
 
 
 \begin{figure}
-\captionsetup{justification=raggedright, singlelinecheck=false}
+\captionsetup{justification=raggedright, singlelinecheck=false} % Moves caption to the left
+% Need \usepackage{caption}
 \caption{H Feistel Function}
 \label{fig:graph}
 \includegraphics{test-figplot}
