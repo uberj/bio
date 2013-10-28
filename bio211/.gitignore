@@ -1,3 +1,5 @@
 template/
 .RData
 .Rhistory
+*.bbl
+*.blg
