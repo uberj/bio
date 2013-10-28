@@ -10,8 +10,9 @@ build:
 	 pdflatex $(LAB_FILE).tex
 
 clean:
-	rm -r $(LAB_FILE).tex
+	rm -f $(LAB_FILE).tex
 	rm -f *.pdf
 	rm -f *.aux
 	rm -f *.log
 	rm -f *.csv
+	rm -f *.png
