@@ -5,7 +5,7 @@ TEX=pdflatex -shell-escape
 basic:
 	$(TEX) $(TEXFILE).tex
 
-all: clean basic bibtex display
+all: clean basic display
 	echo 'Done.'
 
 build: basic sympy
