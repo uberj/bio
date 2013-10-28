@@ -147,7 +147,7 @@ zero'. The observation interval was \SI{30}{seconds}. \\
 %\captionsetup{justification=raggedright, singlelinecheck=false} % Moves caption to the left
 <<ttable, results=tex, echo=FALSE, term=FALSE, fig=FALSE, include=FALSE>>=
     library(stargazer)
-    source('lab2.r')
+    source('lab2.R')
     ph_data = read.csv("ph_data.csv")
     # stargazer likes dataframes, so coerce
     df <- data.frame(pH=names(ph_data), Time=avg(ph_data))
@@ -167,7 +167,7 @@ solution with pH8, on average, took 249 seconds which was the 5th fastest digest
 \caption{Temperature Results}
 \label{fig:temp}
 <<figplot, echo=FALSE, term=FALSE, fig=TRUE, include=TRUE, height=4>>=
-    source('lab2.r')
+    source('lab2.R')
     temp_data = read.csv("temperature_data.csv")
     # http://www.statmethods.net/advgraphs/layout.html
     plot_data(avg(temp_data), xlab='Degrees Celcius', ylab='Seconds', title='Temperature')
@@ -179,7 +179,7 @@ solution with pH8, on average, took 249 seconds which was the 5th fastest digest
 \caption{pH Results}
 \label{fig:cons}
 <<figplot, echo=FALSE, term=FALSE, fig=TRUE, include=TRUE, height=4>>=
-    source('lab2.r')
+    source('lab2.R')
     cons_data = read.csv("consentration_data.csv")
     plot_data(avg(cons_data), xlab='Amylase Concentration Percentage', ylab='Seconds', title='Amylase Concentration')
 @
