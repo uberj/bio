@@ -1,29 +1,202 @@
-\documentclass[a4paper]{article}
-\usepackage{caption}
-\title{Sweave Example 1}
-\author{Vinh Nguyen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki 
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%---------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} command for typesetting SI units
+\usepackage{sympytex}
+%\usepackage{caption}
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=normal,up]{caption}
+\usepackage{dcolumn}
+\usepackage{Sweave}
+\usepackage{python}
+\usepackage{astron}
+\usepackage{enumitem}
+\usepackage[left=3cm, top=3cm, bottom=3cm, right=3cm]{geometry}
+
+
+\usepackage{graphicx} % Required for the inclusion of images
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+\usepackage{times} % Uncomment to use the Times New Roman font
+
 \begin{document}
-\maketitle
-Here is a linear regression example:
+
+\begin{center}
+    \Large{\textsc{Amylase Enzyme Lab}\\[0.2cm]}
+    \large{Jacques \textsc{Uber}\\}
+    \today\\
+\end{center}
+
+\begin{center}
+\begin{tabular}{l r}
+Date Performed: & October 23, 2013 \\ % Date the experiment was performed
+Partners: & Jacques Uber \\ % Partner names
+& n/a \\
+Instructor: & Arick Rouhe % Instructor/supervisor
+\end{tabular}
+\end{center}
+
+%\begin{abstract}
+% Provides a concise, clear summary of the report (summarizes
+% introdution, methods, results, and discussion)
+%\end{abstract}
+
+% Next Wednesday
+% --------------
+% Bring to copies to lab *DON'T PUT YOUR NAME ON IT*
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+\section{Introduction}
+% This is generally how X works, but our X is from a fungus and may be different.
+\label{sec:introduction}
+% Just be the *three* hypothesis
+
+%----------------------------------------------------------------------------------------
+%	SECTION 2
+%----------------------------------------------------------------------------------------
+\section{Methods}
+\label{sec:methods}
+% Describe methods for all three sections
+%
+% Use subsections
+    % * Iodine paragraph
+An iodine (\ce{I_{2}KI}) test was used in testing all three hypothesis.
+
+\subsection{Iodine Test}
+\label{sec:iodine-test}
+An iodine test involves a test plate holding \SI{10}{mL} wells 6 rows wide by 10 deep. Before each
+trial the test plate was reset by being refilled each well with 1 or 2 drops of iodine. Each
+experiment involved a "time zero" at which the timing of starch digestion would begin -- each
+experiment had a slightly different "time zero". \\
+
+To test for the presence of starch, every observation interval (this was different
+for each experiment) 3 drops of an experimental solution where introduced into a fresh well. We
+then would observe whether all of the solution in the well had become a blue color or if the
+well's contents retained iodine's original amber orange color -- if \emph{all} of the solution
+in the well turned at least 20\% blue, it meant starch was present and we continued the trial. When
+a well's solution did not turn blue we recorded that time as the time when all the starch had been
+digested. \\
+
+The following three experiments were performed using the iodine well technique described above.
+
+\subsection{pH Test}
+
+A set of six test tubes were prepared. Each tube contained a different \SI{5}{mL} pH solution.
+The following pHs were used: pH4, pH5, pH6, pH7, pH8, and pH9.
+
+All six tubes took turns being the experimental solution in five separate iodine test. At the
+beginning of each experiment \SI{2.5}{mL} of 0.5\% starch solution was added to the experimental
+test tube -- this was recorded as 'time zero'. The observation interval was \SI{10}{seconds}. \\
+
+\subsection{Temperature Test}
+\newcommand{\degreesC}[1]{$#1\,^{\circ}\mathrm{C}$}
+
+A set of four identical test tubes containing a total of \SI{7}{mL} solution (\SI{2}{mL} 0.5\%
+starch solution, \SI{4}{ml} distilled water, \SI{1}{mL} of 6.8 buffer) was prepared. A second set of
+four identical test tubes containing \SI{1}{mL} of amylase were prepared. The tubes from the two
+sets were then paired off (one tube from the first set and one tube from the second) and placed into
+the following environments: a \degreesC{80} water bath, \degreesC{37} water bath, test-tube rack
+(\degreesC{22} -- room temperature), and a beaker of crushed ice (\degreesC{4}). The pairs of tubes
+were then left in their new environments for \SI{10}{minutes}. The observation interval was
+\SI{10}{seconds}. \\
+
+For each pair of tubes in a different environment, an iodine test was performed where 'time zero'
+was the instance the  experimental solution was created, which for this experiment was the solution
+created by adding one of the tube's solution to the other. All other steps described
+in~\ref{sec:iodine-test} remained the same. \\
+
+\subsection{Concentration Test}
+A set of five test tubes containing a total of \SI{5}{mL} solution was prepared containing different
+concentrations of amylase to distilled water. The concentrations were (amylase to water): 1 to 1, 1
+to 3, 1 to 7, 1 to 15, and 1 to 31. In this experiment, all five tubes took turns being the
+experimental solution in five separate iodine test. At the beginning of each experiment \SI{1}{mL}
+of 0.5\% starch solution was added to the experimental test tube -- this was recorded as 'time
+zero'. The observation interval was \SI{30}{seconds}. \\
+
+%----------------------------------------------------------------------------------------
+%	SECTION 3
+%----------------------------------------------------------------------------------------
+% * Summarizes the data collected
+% * Presents data in a table and in a bar graph or line graph
+% * Describes important trends and data necessary for the discussion section
+\section{Results}
+
+\label{sec:results}
+% One data table
+% 2 figures
+  % * Make sure figure shows the trend the hypothesis is talking about
+
+%\captionsetup{justification=raggedright, singlelinecheck=false} % Moves caption to the left
+<<ttable, results=tex, echo=FALSE, term=FALSE, fig=FALSE, include=FALSE>>=
+    library(stargazer)
+    source('lab2.r')
+    ph_data = read.csv("ph_data.csv")
+    # stargazer likes dataframes, so coerce
+    df <- data.frame(pH=names(ph_data), Time=avg(ph_data))
+    stargazer(
+        df,
+        summary=FALSE,
+        title="Average pH results",
+        align=TRUE,
+        column.sep.width="80pt",
+        label='ph-table'
+    )
+@
+Looking at Table~\ref{ph-table} we can see on average pH9 took the longest to digest starch and pH4 took the shortest amount of time. The
+solution with pH8, on average, took 249 seconds which was the 5th fastest digestion time.
 
 \begin{figure}
-\captionsetup{justification=raggedright, singlelinecheck=false} % Moves caption to the left
-\caption{H Feistel Function}
-\label{fig:graph}
-<<figplot, echo=FALSE, term=FALSE, fig=TRUE, include=TRUE>>=
-    ph_data = read.csv("ph_data.csv")
+\caption{Temperature Results}
+\label{fig:temp}
+<<figplot, echo=FALSE, term=FALSE, fig=TRUE, include=TRUE, height=4>>=
+    source('lab2.r')
     temp_data = read.csv("temperature_data.csv")
-    con_data = read.csv("consentration_data.csv")
-
-    layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE))
-    pH_averages <- colMeans(ph_data)
-    plot(pH_averages, xlab='pH', ylab='Seconds', main='pH')
-
-    temp_averages <- colMeans(temp_data)
-    plot(temp_averages, xlab='Temprature', ylab='Seconds', main='Temprature')
-    con_averages <- colMeans(con_data)
-    plot(con_averages, xlab='Enzyme Concentration', ylab='Seconds', main='Enzyme Concentration')
+    # http://www.statmethods.net/advgraphs/layout.html
+    plot_data(avg(temp_data), xlab='Degrees Celcius', ylab='Seconds', title='Temperature')
 @
 \end{figure}
-Sweave embeds the results as Table ~\ref{fig:graph}!
+
+
+\begin{figure}
+\caption{pH Results}
+\label{fig:cons}
+<<figplot, echo=FALSE, term=FALSE, fig=TRUE, include=TRUE, height=4>>=
+    source('lab2.r')
+    cons_data = read.csv("consentration_data.csv")
+    plot_data(avg(cons_data), xlab='Amylase Concentration Percentage', ylab='Seconds', title='Amylase Concentration')
+@
+\end{figure}
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 4
+%----------------------------------------------------------------------------------------
+\section{Discussion}
+\label{sec:discussion}
+% Discussion/Conclusion
+% ---------------------
+% Have a paragraph for each of the hypothesis
+% A full discussion of the results, even if the data trend is clear.
+% Beat this to death -- even reference the raw data
+% 
+% replicants -- every group doing a trial was a replicant
+
 \end{document}
