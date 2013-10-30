@@ -74,16 +74,15 @@ Instructor: & Arick Rouhe % Instructor/supervisor
 % This is generally how X works, but our X is from a fungus and may be different.
 \label{sec:introduction}
 % Just be the *three* hypothesis
-He hypothesis the following about the fungal amylase used in lab:
+We hypothesize the following about the fungal amylase used in lab:
 \begin{itemize}
     \item Solutions with a higher concentration of amylase will consume starch in a solution
     faster than a solution with a lower concentration of amylase.
 
     \item Solutions with a higher pH level will facilitate a faster starch to maltose conversion
-    rate when both amylase and start are present.
+    rate when both amylase and starch are present.
 
-    \item Amylase will convert starch to maltose the fastest when the environmental temperature is
-\degreesC{80}. \\
+    \item Amylase will convert starch to maltose faster at \degreesC{80} than at any other temperature.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -95,18 +94,19 @@ He hypothesis the following about the fungal amylase used in lab:
 %
 % Use subsections
     % * Iodine paragraph
-An iodine (\ce{I_{2}KI}) test was used to test all three hypothesis.
+An iodine (\ce{I_{2}KI}) test was used to test all three hypothesis. An iodine test is a test that
+measures how quickly an experimental solution digests starch.
 
 \subsection{Iodine Test}
 \label{sec:iodine-test}
-An iodine test involves a test plate holding \SI{10}{mL} wells 6 rows wide and 10 columns deep.
+An iodine test involves a test plate that holds \SI{10}{mL} wells 6 rows wide and 10 columns deep.
 Before each trial the test plate was reset via refilling each well with 1 or 2 drops of iodine.
 Each experiment involved a "time zero" at which the timing of starch digestion would begin -- each
 experiment had a slightly different "time zero". \\
 
 To test for the presence of starch, every observation interval (this was different for each
 experiment) 3 drops of an experimental solution was introduced into a fresh well. Every $x$ amount
-of seconds ($x$ is the 'observation interval') we would observe whether all of the solution in the
+of seconds ($x$ is the "observation interval") we would observe whether all of the solution in the
 well had become a blue color or if the well's contents retained iodine's original amber orange color
 -- if \emph{all} of the solution in the well turned at least 20\% blue, it meant starch was present
 and we continued the trial. When a well's solution did not turn blue we recorded that time as the
@@ -118,7 +118,7 @@ A set of six test tubes was prepared. Each tube contained a different \SI{5}{mL}
 Amylase digestion rate was observed in the following pH environments: pH4, pH5, pH6, pH7, pH8, and
 pH9. \\
 
-All six tubes took turns being the experimental solution in five separate iodine test. At the
+All six tubes took turns being the experimental solution in five separate iodine tests. At the
 beginning of each experiment \SI{2.5}{mL} of 0.5\% starch solution was added to the experimental
 test tube -- this was recorded as "time zero". The observation interval was \SI{10}{seconds}. \\
 
@@ -133,10 +133,8 @@ the following environments: an \degreesC{80} water bath, \degreesC{37} water bat
 were then left in their new environments for \SI{10}{minutes}. \\
 
 For each pair of tubes in a different environment, an iodine test was performed where "time zero"
-was the instance the experimental solution was created, which for this experiment was the solution
-created by adding one of the tube's solution to the other. The observation interval was
-\SI{10}{seconds}. \\
-
+was the instant the experimental solution was created. The experimental solution was created by
+adding one of the tube's solution to the other. The observation interval was \SI{10}{seconds}. \\
 
 \subsection{Concentration Test}
 A set of five test tubes containing a total of \SI{5}{mL} solution was prepared containing different
@@ -178,10 +176,9 @@ zero". The observation interval was \SI{30}{seconds}. \\
     )
 @
 Looking at Table~\ref{temp-table} we can see that, on average, an \degreesC{80} environment yielded
-the longest digestion time and that an environment at \degreesC{37} took the shortest amount of
-time. The solution in a \degreesC{80} water bath, on average, took 750 seconds to digest all of its
-starch which was the slowest digestion time. \\
-
+the longest digestion time and that an environment at \degreesC{37} yielded the shortest digestion
+time. The solution acclimated in a \degreesC{80} water bath, on average, took 750 seconds to digest
+all of its starch which was the slowest digestion time. \\
 
 \begin{figure}
 \centering  % Center the images
@@ -202,8 +199,9 @@ starch which was the slowest digestion time. \\
 \end{figure}
 
 The trend on the right in Figure~\ref{fig:graph} shows that the amylase had a starch digestion rate
-that strictly increased as concentration of the enzyme was increased. When the amylase concentration
-was at its highest (50\%), amylase took the least amount of time to digest all the starch \\
+that strictly increased as concentration of the amylase enzyme was increased. When the amylase
+concentration was at its highest (50\%), amylase took the least amount of time to digest all the
+starch. \\
 
 The trend on the left in Figure~\ref{fig:graph} shows that the amylase had a starch digestion rate
 that strictly decreased as the pH environment went from a lower pH to a higher pH. \\
@@ -239,8 +237,8 @@ digestion time, but we observed that pH 9 (the highest pH we tested) had the slo
 fastest digestion rate (under 10 seconds, on average).\\
 
 Finally, we hypothesised that amylase would convert starch to maltose the fastest when the
-environmental temperature is \degreesC{80}. We can see that Table~\ref{temp-table} lists
-\degreesC{80} as taking 750 seconds, on average, to digest \SI{2}{mL} 0.5\% of starch solution --
+environmental temperature was \degreesC{80}. We can see that Table~\ref{temp-table} lists
+\degreesC{80} as taking 750 seconds, on average, to digest \SI{2}{mL} 0.5\% starch solution --
 this was the longest digestion time we observed. Since other temperatures digested their starch in
 less time than \degreesC{80}, our data seems to refute our hypothesis. Specifically \degreesC{37}
 took only 201 seconds, on average, to digest the starch in its environment which directly contradicts
