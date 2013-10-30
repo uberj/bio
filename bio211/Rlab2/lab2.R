@@ -3,10 +3,10 @@ avg <- function (data) {
     data <- colMeans(data)
     return(data)
 }
-plot_data <- function (avg_data, xlab='', ylab='', title='', strip_X=TRUE, x_scale=1.0) {
+plot_data <- function (avg_data, xlab='', ylab='', title='', strip_x=TRUE, x_scale=1.0) {
     # Data should already by average data
     # Get X axis names without the 'X'
-    if (strip_X) {
+    if (strip_x) {
         xlabels = names(avg_data) <- substr(names(avg_data), 2, nchar(names(avg_data)))
     } else {
         xlabels = names(avg_data)

@@ -21,6 +21,7 @@
 \usepackage[font=small,format=plain,labelfont=bf,up,textfont=normal,up]{caption}
 \usepackage{dcolumn}
 \usepackage{Sweave}
+\usepackage{cleveref}
 \usepackage{python}
 \usepackage{astron}
 \usepackage{enumitem}
@@ -46,8 +47,10 @@
 \begin{center}
 \begin{tabular}{l r}
 Date Performed: & October 23, 2013 \\ % Date the experiment was performed
-Partners: & Jacques Uber \\ % Partner names
-& n/a \\
+Partners: & Jacques \\ % Partner names
+& Chris \\
+& Daniel \\
+& Itzel \\
 Instructor: & Arick Rouhe % Instructor/supervisor
 \end{tabular}
 \end{center}
@@ -61,13 +64,27 @@ Instructor: & Arick Rouhe % Instructor/supervisor
 % --------------
 % Bring to copies to lab *DON'T PUT YOUR NAME ON IT*
 
+\newcommand{\degreesC}[1]{$#1\,^{\circ}\mathrm{C}$}
+
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
+
 \section{Introduction}
 % This is generally how X works, but our X is from a fungus and may be different.
 \label{sec:introduction}
 % Just be the *three* hypothesis
+He hypothesis the following about the fungal amylase used in lab:
+\begin{itemize}
+    \item Solutions with a higher concentration of amylase will consume starch in a solution
+    faster than a solution with a lower concentration of amylase.
+
+    \item Solutions with a higher pH level will facilitate a faster starch to maltose conversion
+    rate when both amylase and start are present.
+
+    \item Amylase will convert starch to maltose the fastest when the environmental temperature is
+\degreesC{80}. \\
+\end{itemize}
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
@@ -78,58 +95,56 @@ Instructor: & Arick Rouhe % Instructor/supervisor
 %
 % Use subsections
     % * Iodine paragraph
-An iodine (\ce{I_{2}KI}) test was used in testing all three hypothesis.
+An iodine (\ce{I_{2}KI}) test was used to test all three hypothesis.
 
 \subsection{Iodine Test}
 \label{sec:iodine-test}
-An iodine test involves a test plate holding \SI{10}{mL} wells 6 rows wide by 10 deep. Before each
-trial the test plate was reset by being refilled each well with 1 or 2 drops of iodine. Each
-experiment involved a "time zero" at which the timing of starch digestion would begin -- each
+An iodine test involves a test plate holding \SI{10}{mL} wells 6 rows wide and 10 columns deep.
+Before each trial the test plate was reset via refilling each well with 1 or 2 drops of iodine.
+Each experiment involved a "time zero" at which the timing of starch digestion would begin -- each
 experiment had a slightly different "time zero". \\
 
-To test for the presence of starch, every observation interval (this was different
-for each experiment) 3 drops of an experimental solution where introduced into a fresh well. We
-then would observe whether all of the solution in the well had become a blue color or if the
-well's contents retained iodine's original amber orange color -- if \emph{all} of the solution
-in the well turned at least 20\% blue, it meant starch was present and we continued the trial. When
-a well's solution did not turn blue we recorded that time as the time when all the starch had been
-digested. \\
-
-The following three experiments were performed using the iodine well technique described above.
+To test for the presence of starch, every observation interval (this was different for each
+experiment) 3 drops of an experimental solution was introduced into a fresh well. Every $x$ amount
+of seconds ($x$ is the 'observation interval') we would observe whether all of the solution in the
+well had become a blue color or if the well's contents retained iodine's original amber orange color
+-- if \emph{all} of the solution in the well turned at least 20\% blue, it meant starch was present
+and we continued the trial. When a well's solution did not turn blue we recorded that time as the
+time when all the starch had been digested. \\
 
 \subsection{pH Test}
 
-A set of six test tubes were prepared. Each tube contained a different \SI{5}{mL} pH solution.
-The following pHs were used: pH4, pH5, pH6, pH7, pH8, and pH9.
+A set of six test tubes was prepared. Each tube contained a different \SI{5}{mL} pH solution.
+Amylase digestion rate was observed in the following pH environments: pH4, pH5, pH6, pH7, pH8, and
+pH9. \\
 
 All six tubes took turns being the experimental solution in five separate iodine test. At the
 beginning of each experiment \SI{2.5}{mL} of 0.5\% starch solution was added to the experimental
-test tube -- this was recorded as 'time zero'. The observation interval was \SI{10}{seconds}. \\
+test tube -- this was recorded as "time zero". The observation interval was \SI{10}{seconds}. \\
 
 \subsection{Temperature Test}
-\newcommand{\degreesC}[1]{$#1\,^{\circ}\mathrm{C}$}
 
-A set of four identical test tubes containing a total of \SI{7}{mL} solution (\SI{2}{mL} 0.5\%
-starch solution, \SI{4}{ml} distilled water, \SI{1}{mL} of 6.8 buffer) was prepared. A second set of
-four identical test tubes containing \SI{1}{mL} of amylase were prepared. The tubes from the two
+A set of four identical test tubes were prepared -- each test tube contained \SI{7}{mL} of solution (\SI{2}{mL} 0.5\%
+starch solution, \SI{4}{ml} distilled water, \SI{1}{mL} of 6.8 buffer.) A second set of
+four identical test tubes containing \SI{1}{mL} of amylase was prepared. The tubes from the two
 sets were then paired off (one tube from the first set and one tube from the second) and placed into
-the following environments: a \degreesC{80} water bath, \degreesC{37} water bath, test-tube rack
+the following environments: an \degreesC{80} water bath, \degreesC{37} water bath, test-tube rack
 (\degreesC{22} -- room temperature), and a beaker of crushed ice (\degreesC{4}). The pairs of tubes
-were then left in their new environments for \SI{10}{minutes}. The observation interval was
+were then left in their new environments for \SI{10}{minutes}. \\
+
+For each pair of tubes in a different environment, an iodine test was performed where "time zero"
+was the instance the experimental solution was created, which for this experiment was the solution
+created by adding one of the tube's solution to the other. The observation interval was
 \SI{10}{seconds}. \\
 
-For each pair of tubes in a different environment, an iodine test was performed where 'time zero'
-was the instance the  experimental solution was created, which for this experiment was the solution
-created by adding one of the tube's solution to the other. All other steps described
-in~\ref{sec:iodine-test} remained the same. \\
 
 \subsection{Concentration Test}
 A set of five test tubes containing a total of \SI{5}{mL} solution was prepared containing different
 concentrations of amylase to distilled water. The concentrations were (amylase to water): 1 to 1, 1
 to 3, 1 to 7, 1 to 15, and 1 to 31. In this experiment, all five tubes took turns being the
-experimental solution in five separate iodine test. At the beginning of each experiment \SI{1}{mL}
-of 0.5\% starch solution was added to the experimental test tube -- this was recorded as 'time
-zero'. The observation interval was \SI{30}{seconds}. \\
+experimental solution in five separate iodine tests. At the beginning of each experiment \SI{1}{mL}
+of 0.5\% starch solution was added to the experimental test tube -- this was recorded as "time
+zero". The observation interval was \SI{30}{seconds}. \\
 
 %----------------------------------------------------------------------------------------
 %	SECTION 3
@@ -148,42 +163,50 @@ zero'. The observation interval was \SI{30}{seconds}. \\
 <<ttable, results=tex, echo=FALSE, term=FALSE, fig=FALSE, include=FALSE>>=
     library(stargazer)
     source('lab2.R')
-    ph_data = read.csv("ph_data.csv")
+    temp_data = read.csv("temperature_data.csv")
     # stargazer likes dataframes, so coerce
-    df <- data.frame(pH=names(ph_data), Time=avg(ph_data))
+
+    avg_temp_data = avg(temp_data)
+    temps = names(avg_temp_data) <- substr(names(avg_temp_data), 2, nchar(names(avg_temp_data)))
+    df <- data.frame(Temprature=temps, Seconds=avg_temp_data)
     stargazer(
         df,
         summary=FALSE,
-        title="Average pH results",
-        align=TRUE,
+        title="Average Temperature Results",
         column.sep.width="80pt",
-        label='ph-table'
+        label='temp-table'
     )
 @
-Looking at Table~\ref{ph-table} we can see on average pH9 took the longest to digest starch and pH4 took the shortest amount of time. The
-solution with pH8, on average, took 249 seconds which was the 5th fastest digestion time.
-
-\begin{figure}
-\caption{Temperature Results}
-\label{fig:temp}
-<<figplot, echo=FALSE, term=FALSE, fig=TRUE, include=TRUE, height=4>>=
-    source('lab2.R')
-    temp_data = read.csv("temperature_data.csv")
-    # http://www.statmethods.net/advgraphs/layout.html
-    plot_data(avg(temp_data), xlab='Degrees Celcius', ylab='Seconds', title='Temperature')
-@
-\end{figure}
+Looking at Table~\ref{temp-table} we can see that, on average, an \degreesC{80} environment yielded
+the longest digestion time and that an environment at \degreesC{37} took the shortest amount of
+time. The solution in a \degreesC{80} water bath, on average, took 750 seconds to digest all of its
+starch which was the slowest digestion time. \\
 
 
 \begin{figure}
-\caption{pH Results}
-\label{fig:cons}
+\centering  % Center the images
 <<figplot, echo=FALSE, term=FALSE, fig=TRUE, include=TRUE, height=4>>=
     source('lab2.R')
+    ph_data = read.csv("ph_data.csv")
     cons_data = read.csv("consentration_data.csv")
-    plot_data(avg(cons_data), xlab='Amylase Concentration Percentage', ylab='Seconds', title='Amylase Concentration')
+    # http://www.statmethods.net/advgraphs/layout.html
+    par(mfrow=c(1,2))
+    plot_data(avg(ph_data), xlab='pH', ylab='Seconds', title='pH', strip_x=FALSE, x_scale=0.75)
+    plot_data(
+        avg(cons_data), xlab='Amylase Concentration Percentage', ylab='Seconds',
+        title='Amylase Concentration', x_scale=0.7
+    )
 @
+\caption{Temperature Results}
+\label{fig:graph}
 \end{figure}
+
+The trend on the right in Figure~\ref{fig:graph} shows that the amylase had a starch digestion rate
+that strictly increased as concentration of the enzyme was increased. When the amylase concentration
+was at its highest (50\%), amylase took the least amount of time to digest all the starch \\
+
+The trend on the left in Figure~\ref{fig:graph} shows that the amylase had a starch digestion rate
+that strictly decreased as the pH environment went from a lower pH to a higher pH. \\
 
 
 %----------------------------------------------------------------------------------------
@@ -198,5 +221,29 @@ solution with pH8, on average, took 249 seconds which was the 5th fastest digest
 % Beat this to death -- even reference the raw data
 % 
 % replicants -- every group doing a trial was a replicant
+
+We hypothesised that solutions with a higher concentration of amylase would consume all starch in a
+solution faster than a solution with a lower concentration of amylase. From the Amylase
+Concentration graph in Figure~\ref{fig:graph} we can see a logarithmic decrease in starch
+consumption time as concentration increases; this trend supports our hypothesis. The fastest starch
+digestion time (roughly 20 seconds) was when the concentration of amylase was 50\%, which was the
+highest concentration we tested. All other concentrations of amylase took more than 30 seconds to
+digest all the starch. \\
+
+We also hypothesised that solutions with a higher pH level would facilitate a faster starch to maltose
+conversion rate when both amylase and start were present. Looking at the pH graph in
+Figure~\ref{fig:graph} we can see a logarithmic increase in starch digestion time as pH increases;
+this refutes our hypothesis. According to our hypothesis the highest pH should have had the fastest
+digestion time, but we observed that pH 9 (the highest pH we tested) had the slowest digestion rate
+(greater than 500 seconds). Contrary to our hypothesis, pH 4 (the lowest pH we tested) had the
+fastest digestion rate (under 10 seconds, on average).\\
+
+Finally, we hypothesised that amylase would convert starch to maltose the fastest when the
+environmental temperature is \degreesC{80}. We can see that Table~\ref{temp-table} lists
+\degreesC{80} as taking 750 seconds, on average, to digest \SI{2}{mL} 0.5\% of starch solution --
+this was the longest digestion time we observed. Since other temperatures digested their starch in
+less time than \degreesC{80}, our data seems to refute our hypothesis. Specifically \degreesC{37}
+took only 201 seconds, on average, to digest the starch in its environment which directly contradicts
+our hypothesis since \degreesC{80} took 750 seconds.
 
 \end{document}

@@ -6,10 +6,11 @@ all: build
 build:
 	 python $(LAB_FILE).py
 	 R CMD Sweave $(LAB_FILE).Rnw
-	 pdflatex $(LAB_FILE).tex
-	 pdflatex $(LAB_FILE).tex
+	 latexmk -pdf $(LAB_FILE).tex
+	 latexmk -pdf $(LAB_FILE).tex
 
 clean:
+	latexmk -C
 	rm -f $(LAB_FILE).tex
 	rm -f *.pdf
 	rm -f *.aux
