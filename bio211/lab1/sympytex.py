@@ -83,6 +83,7 @@ def blockbegin():
   progress('Code block begin...', False)
 def blockend():
   progress('end')
+
 def plot(counter, p, format='notprovided', epsmagick=False, **kwargs):
   global dirname
   progress('Plot %s' % counter)
@@ -98,6 +99,7 @@ def plot(counter, p, format='notprovided', epsmagick=False, **kwargs):
       print('Calling Imagemagick to convert plot-%s.%s to EPS' % \
         (counter, format))
       toeps(counter, format)
+
 def toeps(counter, ext):
   global dirname
   subprocess.check_call(['convert',\
