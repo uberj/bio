@@ -40,17 +40,17 @@
 
 \begin{center}
     \Large{\textsc{Amylase Enzyme Lab}\\[0.2cm]}
-    \large{Jacques \textsc{Uber}\\}
+    %\large{Jacques \textsc{Uber}\\}
     \today\\
 \end{center}
 
 \begin{center}
 \begin{tabular}{l r}
 Date Performed: & October 23, 2013 \\ % Date the experiment was performed
-Partners: & Jacques \\ % Partner names
-& Chris \\
-& Daniel \\
-& Itzel \\
+%Partners: & Jacques \\ % Partner names
+%& Chris \\
+%& Daniel \\
+%& Itzel \\
 Instructor: & Arick Rouhe % Instructor/supervisor
 \end{tabular}
 \end{center}
@@ -151,8 +151,10 @@ zero". The observation interval was \SI{30}{seconds}. \\
 % * Presents data in a table and in a bar graph or line graph
 % * Describes important trends and data necessary for the discussion section
 \section{Results}
-
 \label{sec:results}
+
+All three experiments had five replicants. Data from the replicants was pooled and averages were
+compiled to come up with a final dataset for each experiment.
 % One data table
 % 2 figures
   % * Make sure figure shows the trend the hypothesis is talking about
