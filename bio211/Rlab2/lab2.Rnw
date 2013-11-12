@@ -56,15 +56,9 @@ Instructor: & Arick Rouhe % Instructor/supervisor
 \end{center}
 
 %\begin{abstract}
-% Provides a concise, clear summary of the report (summarizes
-% introdution, methods, results, and discussion)
+% Provides a concise, clear summary of the report (summarizes, introdution,
+% methods, results, and discussion).
 %\end{abstract}
-
-% Next Wednesday
-% --------------
-% Bring to copies to lab *DON'T PUT YOUR NAME ON IT*
-
-\newcommand{\degreesC}[1]{$#1\,^{\circ}\mathrm{C}$}
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
@@ -72,18 +66,74 @@ Instructor: & Arick Rouhe % Instructor/supervisor
 
 \section{Introduction}
 % This is generally how X works, but our X is from a fungus and may be different.
+% TODO at least 4 paragraphs in hypothesis
 \label{sec:introduction}
 % Just be the *three* hypothesis
-We hypothesize the following about the fungal amylase used in lab:
-\begin{itemize}
-    \item Solutions with a higher concentration of amylase will consume starch in a solution
-    faster than a solution with a lower concentration of amylase.
+% * Provides a concise background on enzymes
+A major contributer to metabolic processes are large proteins called enzymes. In cells an enzyme is
+usually acting as a catalyst in an aqueous solution and the substance that an enzyme acts upon is known
+as the substrate. An enzyme molecule latches onto one or more substrate molecules at a location on
+the enzyme known as the active site -- this larger molecule comprised of the enzyme and the
+substrate is known as the enzyme-complex \cite{lab-manual}. The rate at which an enzyme binds and
+acts upon its substrate to produce product is influenced by three major environmental factors: the
+environmental pH level, the environmental temperature, and the ratio of enzyme to substrate. \\
 
-    \item Solutions with a higher pH level will facilitate a faster starch to maltose conversion
-    rate when both amylase and starch are present.
+Enzyme shape is influenced by the precense or absense of \ce{OH-} or \ce{H+} ions. These ions
+interact with the amino acid side chains of the enzyme, which influence its secondary, tertiary, and
+in some cases, quatrinary structure. The pH an enzyme is most effective at is called
+the 'optimum pH' and is slightly different for every enzyme. \\
 
-    \item Amylase will convert starch to maltose faster at \degreesC{80} than at any other temperature.
-\end{itemize}
+The temperature of the environment will affect that rate at which an enzyme will do work. Most enzymes
+have a maximum level of efficiency where temperature increases or decreases will only hinder the
+enzyme's ability to convert substrate into product. At high temperatures noncovalent forces that hold
+an enzyme's secondary and tertiary structure in place begin to break down and the enzyme begins to
+denature. Denaturing will deactivate an enzyme.\\
+
+The ratio of substrate to enzyme is a factor in reaction rate as well. Most enzyme molecules react with one
+substrate molecule at a time, thus when every enzyme molecule becomes busy there are no free enzyme
+molecules to bind to additional substrate molecules. This saturation point is different for every
+enzyme and is a function of how fast an enzyme does its work \cite{worthington}. \\
+
+\newcommand{\aamylase}{$\alpha$-amylase }
+\newcommand{\aamylasens}{$\alpha$-amylase}
+\newcommand{\Aamylase}{$\alpha$-Amylase}
+\newcommand{\onefour}{$\alpha$1,4}
+\newcommand{\onesix}{$\alpha$1,6}
+\newcommand{\aglucose}{$\alpha$-glucose}
+\newcommand{\degreesC}[1]{$#1\,^{\circ}\mathrm{C}$}
+
+% * Explains function, activity, and influences on amylase
+Amylase is an enzyme that that plays a crucial role in animals as an enzyme that helps break down
+starch during digestion. Some amylase, like \aamylase, is used in industrial processes as a starch
+liquefaction agent and as a detergent. Starch is made up of two polysaccharides: amylose and
+amylopectin. Amylose is comprised of \aglucose monomers connected via a \onefour-glycosidic bond.
+Amylopectin is made of similar \aglucose monomers but is more branched than amylose due to
+occasional \onesix-glycosidec bonds between two glucose. All amylase enzymes can perform glycolysis,
+cleaving \onefour-glycosidic bonds. \\
+
+In humans, certain types of \aamylase is present as a food digestive enzyme in the intestinal luman.
+The enzyme helps to curve excesive digestion and consumes glucose before it can enter the intestinal
+cells and be used for energy \cite{Chanida}. Because this enzyme is active in the intestine, it
+probably has an optimal temperature close to that of average body temperature and performs well in a
+basic environment. Some other \aamylase is active between pH 1.0 and roughly pH 11.5 which lends
+well to industrial uses that are carried out at the extreme ends of the pH scale \cite{Nielsen}. \\
+
+Thermostability is the ability for an enzyme to experience temperature change and still function as a
+catalyst. \Aamylase is especially good at resisting denaturing at a broad range of temperatures
+and has been observed breaking down starch at \degreesC{40} to \degreesC{100} \cite{fitter}. \\
+
+% * Brief overview, hypothesis, and expected outcome of experiment
+For our experiments we were given an unknown fungal amylase. Fungal amylase is similar to \aamylase
+in that it cleaves \onefour glycosidic bonds. We seek to investigate the influences pH, temperature,
+and concentration on this amylase's ability to digest starch. We hypothesize the following about the
+fungal amylase: Solutions with a higher pH level will facilitate a faster starch to
+maltose conversion rate when both amylase and starch are present; Amylase will convert starch to
+maltose faster at \degreesC{80} than at any other temperature; Solutions with a higher concentration
+of amylase will consume starch in a solution faster than a solution with a lower concentration of
+amylase.
+
+Supporting or refuting our three hypothesis will allow us to compare the behavior of our fungal
+amylase to that of \aamylase.
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
@@ -150,6 +200,12 @@ zero". The observation interval was \SI{30}{seconds}. \\
 % * Summarizes the data collected
 % * Presents data in a table and in a bar graph or line graph
 % * Describes important trends and data necessary for the discussion section
+
+% TODO
+% Talk about different data points -- the variablity of each groups data. Which
+% data points were all the same? Which data points had a large standard
+% deviation.
+
 \section{Results}
 \label{sec:results}
 
@@ -177,6 +233,9 @@ compiled to come up with a final dataset for each experiment.
         label='temp-table'
     )
 @
+The trend on the left in Figure~\ref{fig:graph} shows that the amylase had a starch digestion rate
+that strictly decreased as the pH environment went from a lower pH to a higher pH. \\
+
 Looking at Table~\ref{temp-table} we can see that, on average, an \degreesC{80} environment yielded
 the longest digestion time and that an environment at \degreesC{37} yielded the shortest digestion
 time. The solution acclimated in a \degreesC{80} water bath, on average, took 750 seconds to digest
@@ -196,7 +255,7 @@ all of its starch which was the slowest digestion time. \\
         title='Amylase Concentration', x_scale=0.7
     )
 @
-\caption{Temperature Results}
+\caption{Concentrationa and pH Results}
 \label{fig:graph}
 \end{figure}
 
@@ -204,9 +263,6 @@ The trend on the right in Figure~\ref{fig:graph} shows that the amylase had a st
 that strictly increased as concentration of the amylase enzyme was increased. When the amylase
 concentration was at its highest (50\%), amylase took the least amount of time to digest all the
 starch. \\
-
-The trend on the left in Figure~\ref{fig:graph} shows that the amylase had a starch digestion rate
-that strictly decreased as the pH environment went from a lower pH to a higher pH. \\
 
 
 %----------------------------------------------------------------------------------------
@@ -219,18 +275,17 @@ that strictly decreased as the pH environment went from a lower pH to a higher p
 % Have a paragraph for each of the hypothesis
 % A full discussion of the results, even if the data trend is clear.
 % Beat this to death -- even reference the raw data
-% 
+%
 % replicants -- every group doing a trial was a replicant
 
-We hypothesised that solutions with a higher concentration of amylase would consume all starch in a
-solution faster than a solution with a lower concentration of amylase. From the Amylase
-Concentration graph in Figure~\ref{fig:graph} we can see a logarithmic decrease in starch
-consumption time as concentration increases; this trend supports our hypothesis. The fastest starch
-digestion time (roughly 20 seconds) was when the concentration of amylase was 50\%, which was the
-highest concentration we tested. All other concentrations of amylase took more than 30 seconds to
-digest all the starch. \\
+% TODO
+% Explain goal of study and logical implication so results
+%   * Talk about error: talk about reasons for variability. Not about how
+%   results were inaccurate.
+% Refer to other research in discussion of results. Talk about other studies
+% that studied different fungal amylase and compare results to them.
 
-We also hypothesised that solutions with a higher pH level would facilitate a faster starch to maltose
+We hypothesised that solutions with a higher pH level would facilitate a faster starch to maltose
 conversion rate when both amylase and start were present. Looking at the pH graph in
 Figure~\ref{fig:graph} we can see a logarithmic increase in starch digestion time as pH increases;
 this refutes our hypothesis. According to our hypothesis the highest pH should have had the fastest
@@ -238,12 +293,60 @@ digestion time, but we observed that pH 9 (the highest pH we tested) had the slo
 (greater than 500 seconds). Contrary to our hypothesis, pH 4 (the lowest pH we tested) had the
 fastest digestion rate (under 10 seconds, on average).\\
 
-Finally, we hypothesised that amylase would convert starch to maltose the fastest when the
+All of the groups that performed the pH experiment terminated their pH 9 trail after amylase failed
+to digest the starch after 420 seconds (two groups even waited 435 and 600 seconds). It would seem
+that the fungal amylase enzyme was deactivated by the high pH. As mentioned
+in~\ref{sec:introduction}, some \aamylase used in industrial processes are active up to pH 11.5. Our
+fungal amylase would not be a good amylase for use in extreme industrial processes that require
+activity at high end pH levels. On the contrary, our optimal pH was actually very similar to that of
+an \aamylase used to process date waste \cite{Acourene}. \\
+
+We also, hypothesised that amylase would convert starch to maltose the fastest when the
 environmental temperature was \degreesC{80}. We can see that Table~\ref{temp-table} lists
-\degreesC{80} as taking 750 seconds, on average, to digest \SI{2}{mL} 0.5\% starch solution --
-this was the longest digestion time we observed. Since other temperatures digested their starch in
-less time than \degreesC{80}, our data seems to refute our hypothesis. Specifically \degreesC{37}
-took only 201 seconds, on average, to digest the starch in its environment which directly contradicts
-our hypothesis since \degreesC{80} took 750 seconds.
+\degreesC{80} as taking 750 seconds, on average, to digest \SI{2}{mL} 0.5\% starch solution -- this
+was the longest digestion time we observed. Since other temperatures digested their starch in less
+time than \degreesC{80}, our data seems to refute our hypothesis. Specifically \degreesC{37} took
+only 201 seconds, on average, to digest the starch in its environment which directly contradicts our
+hypothesis. \\
+
+We observed that every experimental replicant had to stop the continuation of the iodine
+test after 600 seconds -- the fungal amylase seemed to denature. It is interesting to note that some
+\aamylase used in industrial processes discussed in~\ref{sec:introduction} have a much higher
+thermostability than the fungal amylase used in our experiment. The most productive temperature we
+tested our fungal amylase at was \degreesC{37}.  \Aamylase from \emph{Saccharomycopsis egfibuligera}
+has an optimum temperature range from \degreesC{40} to \degreesC{50} which is similar to our
+results \cite{Hostinova}. \\
+
+Finally, we hypothesised that solutions with a higher concentration of amylase would consume all
+starch in a solution faster than a solution with a lower concentration of amylase. From the Amylase
+Concentration graph in Figure~\ref{fig:graph} we can see a logarithmic decrease in starch
+consumption time as concentration increases; this trend supports our hypothesis. The fastest starch
+digestion time (roughly 20 seconds) was when the concentration of amylase was 50\%, which was the
+highest concentration we tested. All other concentrations of amylase took more than 30 seconds to
+digest all the starch.\\
+
+
+\subsection{Error}
+We had five replicants for each experiment performed. Each replicant was carried out by a different
+experimenter and so experimental bias and experimental error could have occurred in many areas For
+example, the iodine test relies on a subjective decision of whether the iodine solution is "blue".
+Also, each group doing the experiment could have different ideas of what "blue" was. This type of
+experimental error would seem to be very hard to measure. \\
+
+The observational interval introduced measurable amount of error. Each hypothesis and accompanying
+experiment involved measuring for start at a periodic interval (e.g. every $x$ number of seconds).
+This leaves the possibility of complete starch digestion occurring some time in between observation
+intervals. \\
+
+When we averaged our data we encountered data points with a value 'greater than' a certain time
+amount and values 'less than' a certain time amount. Since we needed actual numbers to calculate our
+averages, we used two heuristics to decide on real data values. When we encountered a time
+measurement like "less than $x$ seconds", we used the time $x/2$ as the data value. When we
+encountered a time measurement like "greater than $x$ seconds", we used the time $x/4 + x$ as the
+data point. Floating point division was used both these cases.
+
+\bibliographystyle{cbe}
+
+\bibliography{bib}
 
 \end{document}
