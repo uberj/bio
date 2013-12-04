@@ -22,6 +22,22 @@ Chapter 13
 ==========
 * pg 249 - A gene's specific location along the length of a chromosome is called the gene's locus. What is a "gene"? If it is the thing that is expressed, how can it be located in one location?
 
+Key Terms
+---------
+gametes - repoductive cells
+somatic cells - all cells except for the gametes and their precursors
+locus (plural loci) - the specific location along the length of a chromosome where a gene is said to exist
+karyotype - pairing up all the chromosomes in one picture
+autosomes - all the chromosomes except for the sex chromosomes
+diploid cell - A cell with two chromosome sets
+haploid cell - gametes that contain a single set of chromosomes
+haploid number - n
+diploid number - 2n
+haploid number in humans - 23
+diplaid number in humans - 23 * 2 = 46
+zygote - a fertilized egg
+homologous chromosome - The two chromosomes composing a pair that has the same length, centromere position, and staining pattern (when looking at karyotype).
+
 Concept Check 13.2 - pg. 523
 ----------------------------
 1. 12
@@ -34,5 +50,4 @@ Concept Check 13.2 - pg. 523
    - Wrong. haploid is 7 and diploid is 14
 
 4. fungi and some protist
-
 
